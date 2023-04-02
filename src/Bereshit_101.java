@@ -44,7 +44,7 @@ public class Bereshit_101 {
 		double acc=0; // Acceleration rate (m/s^2)
 		double fuel = 121; // 
 		double weight = WEIGHT_EMP + fuel;
-		System.out.println("time, vs, hs, dist, alt, ang,weight,acc, fuel");
+		System.out.println("time, vs, hs, dist, alt, ang,weight,acc, fuel,gas");
 		double NN = 0.7; // rate[0,1] 
 		
 		double P = 0.04;
@@ -65,7 +65,7 @@ public class Bereshit_101 {
 			}
 			
 			if(time%10==0 || alt<100) {
-				System.out.println(time+","+vs+","+hs+","+dist+","+alt+","+ang+","+weight+","+acc+","+ fuel);
+				System.out.println(time+","+vs+","+hs+","+dist+","+alt+","+ang+","+weight+","+acc+","+ fuel +"," + gas );
 				
 			}
 			counter++;
@@ -95,10 +95,10 @@ public class Bereshit_101 {
 					dvs = 12;
 				}else if(alt > 200) {
 					dvs = 6;
-					NN = 0.85;
+					NN = 0.8447;
 				}else if(alt > 100) {
 					dvs = 4;
-					NN = 0.9;
+					NN = 0.895;
 				}else if(alt > 50) {
 					dvs = 1;
 					NN = 1;
